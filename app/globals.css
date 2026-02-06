@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-bg-primary text-text-primary font-inter antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-16;
+  }
+  
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-4 
+           bg-gradient-to-br from-pink-medium to-pink-accent 
+           text-white font-semibold text-base
+           rounded-full border-none cursor-pointer
+           transition-all duration-300 ease-out
+           shadow-button hover:shadow-button-hover
+           hover:-translate-y-0.5
+           focus:outline-none focus:ring-2 focus:ring-pink-accent focus:ring-offset-2;
+  }
+  
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-7 py-3.5
+           bg-transparent border-2 border-pink-accent text-pink-accent
+           rounded-full transition-all duration-300 ease-out cursor-pointer
+           hover:bg-pink-accent hover:text-white
+           focus:outline-none focus:ring-2 focus:ring-pink-accent focus:ring-offset-2;
+  }
+  
+  .btn-gold {
+    @apply inline-flex items-center justify-center px-8 py-4
+           bg-gradient-to-r from-gold via-gold-muted to-gold
+           text-text-primary font-semibold uppercase tracking-wider
+           rounded-lg border-none cursor-pointer
+           transition-all duration-300 ease-out
+           hover:-translate-y-0.5 hover:shadow-medium
+           focus:outline-none focus:ring-2 focus:ring-gold focus:ring-offset-2;
+  }
+  
+  .section-title {
+    @apply font-playfair text-2xl sm:text-3xl lg:text-4xl font-semibold text-text-primary leading-tight;
+  }
+  
+  .section-subtitle {
+    @apply font-inter text-base sm:text-lg text-text-secondary leading-relaxed;
+  }
+  
+  .card {
+    @apply bg-white rounded-2xl p-6 shadow-soft
+           transition-all duration-300 ease-out
+           hover:-translate-y-2 hover:shadow-medium;
+  }
+  
+  .card-pink {
+    @apply bg-gradient-to-br from-bg-accent to-pink-soft rounded-3xl p-8;
+  }
+  
+  .feature-card {
+    @apply bg-white/80 backdrop-blur-sm rounded-2xl p-8 text-center
+           border border-pink-medium/20
+           transition-all duration-300 ease-out
+           hover:-translate-y-1 hover:shadow-soft;
+  }
+  
+  .input-field {
+    @apply w-full px-6 py-4 border border-beige rounded-xl
+           text-base bg-white transition-all duration-300
+           focus:outline-none focus:border-pink-medium focus:ring-4 focus:ring-pink-medium/20;
+  }
+  
+  .accent-box {
+    @apply bg-gradient-to-br from-bg-accent to-pink-soft 
+           rounded-2xl p-6 border-l-4 border-pink-accent;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-pink-accent to-pink-deep bg-clip-text text-transparent;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
