@@ -1,0 +1,9 @@
+services:
+  neva-zefir:
+    build: .
+    container_name: neva-zefir
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
