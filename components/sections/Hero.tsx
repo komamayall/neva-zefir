@@ -6,7 +6,7 @@ import { Swirls } from '@/components/ui/hero-section-7'
 
 const heroImages = [
     {
-        src: '/img/plate.png',
+        src: '/img/plate.webp',
         alt: 'Тарелка с зефиром',
         // Top-Left: Desktop lowered slightly (lg:top-[4%]).
         wrapperClass: 'absolute top-[5%] left-[2%] sm:top-[5%] sm:left-[5%] lg:left-[2%] xl:left-[5%] 2xl:left-[18%] lg:top-[4%] rotate-[35deg] z-10',
@@ -14,7 +14,7 @@ const heroImages = [
         delay: 0
     },
     {
-        src: '/img/circlebox.png',
+        src: '/img/circlebox.webp',
         alt: 'Коробка сладостей',
         // Top-Right: Desktop lowered slightly (lg:top-[6%]).
         wrapperClass: 'absolute top-[8%] right-[2%] sm:top-[5%] sm:right-[5%] lg:right-[2%] xl:right-[5%] 2xl:right-[18%] lg:top-[6%] rotate-[-15deg] z-10',
@@ -22,7 +22,7 @@ const heroImages = [
         delay: 1500
     },
     {
-        src: '/img/buket.png',
+        src: '/img/buket.webp',
         alt: 'Зефирный букет',
         // Bottom-Right: Mobile raised (bottom-[25%]) to be above buttons.
         wrapperClass: 'absolute bottom-[25%] right-[0%] sm:bottom-[10%] sm:right-[5%] lg:right-[2%] xl:right-[5%] 2xl:right-[18%] lg:bottom-[5%] rotate-[-10deg] z-20',
@@ -30,7 +30,7 @@ const heroImages = [
         delay: 1000
     },
     {
-        src: '/img/giftbox.png',
+        src: '/img/giftbox.webp',
         alt: 'Подарочный набор',
         // Bottom-Left: Mobile raised (bottom-[30%]) to be above buttons.
         wrapperClass: 'absolute bottom-[30%] left-[0%] sm:bottom-[15%] sm:left-[5%] lg:left-[2%] xl:left-[5%] 2xl:left-[18%] lg:bottom-[8%] rotate-[8deg] z-10',

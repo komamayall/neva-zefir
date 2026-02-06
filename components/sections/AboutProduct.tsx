@@ -26,7 +26,7 @@ export default function AboutProduct() {
                     {/* Right Column: Image */}
                     <div className="relative aspect-[4/5] w-full max-w-md mx-auto lg:mx-0 lg:ml-auto rounded-3xl overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500">
                         <Image
-                            src="/img/creator.jpg"
+                            src="/img/creator.webp"
                             alt="Мастер зефирной флористики"
                             fill
                             className="object-cover"
