@@ -11,7 +11,8 @@ const heroImages = [
         // Top-Left: Desktop lowered slightly (lg:top-[4%]).
         wrapperClass: 'absolute top-[5%] left-[2%] sm:top-[5%] sm:left-[5%] lg:left-[2%] xl:left-[5%] 2xl:left-[18%] lg:top-[4%] rotate-[35deg] z-10',
         imgClass: 'w-16 sm:w-28 md:w-36 lg:w-40 animate-float drop-shadow-2xl object-contain transition-opacity',
-        delay: 0
+        delay: 0,
+        isLCP: false
     },
     {
         src: '/img/circlebox_sm.webp',
@@ -19,7 +20,8 @@ const heroImages = [
         // Top-Right: Desktop lowered slightly (lg:top-[6%]).
         wrapperClass: 'absolute top-[8%] right-[2%] sm:top-[5%] sm:right-[5%] lg:right-[2%] xl:right-[5%] 2xl:right-[18%] lg:top-[6%] rotate-[-15deg] z-10',
         imgClass: 'w-16 sm:w-28 md:w-36 lg:w-40 animate-float drop-shadow-2xl object-contain transition-opacity',
-        delay: 1500
+        delay: 1500,
+        isLCP: false
     },
     {
         src: '/img/buket_sm.webp',
@@ -27,7 +29,8 @@ const heroImages = [
         // Bottom-Right: Mobile raised (bottom-[25%]) to be above buttons.
         wrapperClass: 'absolute bottom-[25%] right-[0%] sm:bottom-[10%] sm:right-[5%] lg:right-[2%] xl:right-[5%] 2xl:right-[18%] lg:bottom-[5%] rotate-[-10deg] z-20',
         imgClass: 'w-20 sm:w-40 md:w-52 lg:w-56 animate-float drop-shadow-2xl object-contain transition-opacity',
-        delay: 1000
+        delay: 1000,
+        isLCP: true
     },
     {
         src: '/img/giftbox_sm.webp',
@@ -35,7 +38,8 @@ const heroImages = [
         // Bottom-Left: Mobile raised (bottom-[30%]) to be above buttons.
         wrapperClass: 'absolute bottom-[30%] left-[0%] sm:bottom-[15%] sm:left-[5%] lg:left-[2%] xl:left-[5%] 2xl:left-[18%] lg:bottom-[8%] rotate-[8deg] z-10',
         imgClass: 'w-20 sm:w-36 md:w-44 lg:w-52 animate-float drop-shadow-2xl object-contain transition-opacity',
-        delay: 2500
+        delay: 2500,
+        isLCP: false
     }
 ]
 
@@ -70,6 +74,7 @@ export default function Hero({ onOrderClick }: HeroProps) {
                             alt={image.alt}
                             className={image.imgClass}
                             style={{ animationDelay: `${image.delay}ms` }}
+                            fetchPriority={image.isLCP ? 'high' : 'auto'}
                         />
                     </div>
                 ))}

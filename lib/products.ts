@@ -17,9 +17,14 @@ function findImagePath(imageName: string): string {
         return `/img/${imageName}`
     }
 
-    // Try to find file with any extension
+    // Try to find optimized 600px version first
     const imgDir = path.join(process.cwd(), 'public', 'img')
+    const optimizedPath = path.join(imgDir, `${imageName}_600.webp`)
+    if (fs.existsSync(optimizedPath)) {
+        return `/img/${imageName}_600.webp`
+    }
 
+    // Try to find file with any extension
     for (const ext of IMAGE_EXTENSIONS) {
         const fullPath = path.join(imgDir, `${imageName}${ext}`)
         if (fs.existsSync(fullPath)) {
@@ -27,8 +32,8 @@ function findImagePath(imageName: string): string {
         }
     }
 
-    // Default to jpg if not found
-    return `/img/${imageName}.jpg`
+    // Default to webp if not found
+    return `/img/${imageName}.webp`
 }
 
 export function loadProductsFromCSV(): Product[] {
